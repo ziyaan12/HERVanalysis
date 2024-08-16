@@ -12,7 +12,7 @@ df[['TPM_Skmel5-1-B1R1_S3', 'TPM_Skmel5-1-B1R2_S2', 'TPM_Skmel5-10-B1R1_S2', 'TP
 # remove any rows with any NaN values
 df_clean = df.dropna()
 
-# perform the t-tests for each transcrip
+# perform the t-tests and log fold change for each transcrip
 results = []
 for index, row in df_clean.iterrows():
     group1 = row[['TPM_Skmel5-1-B1R1_S3', 'TPM_Skmel5-1-B1R2_S2']].to_numpy(dtype=float)
